@@ -29,7 +29,7 @@
 |        |             |                                                              |                                                              |
 |        |             |                                                              |                                                              |
 | SENet  | CVPR 2018   | Squeeze-and-Excitation Networks                              | https://openaccess.thecvf.com/content_cvpr_2018/html/Hu_Squeeze-and-Excitation_Networks_CVPR_2018_paper.html |
-|        |             |                                                              |                                                              |
+| CBAM | ECCV 2018 | CBAM: Convolutional Block Attention Module | https://openaccess.thecvf.com/content_ECCV_2018/html/Sanghyun_Woo_Convolutional_Block_Attention_ECCV_2018_paper.html |
 | ECA    | CVPR 2020   | ECA-Net: Efficient Channel Attention for Deep Convolutional Neural Networks | https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_ECA-Net_Efficient_Channel_Attention_for_Deep_Convolutional_Neural_Networks_CVPR_2020_paper.html |
 |        |             |                                                              |                                                              |
 |        |             |                                                              |                                                              |
