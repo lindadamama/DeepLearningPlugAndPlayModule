@@ -30,7 +30,10 @@
 |          |             |                                                              |                                                              |
 | SENet    | CVPR 2018   | Squeeze-and-Excitation Networks                              | https://openaccess.thecvf.com/content_cvpr_2018/html/Hu_Squeeze-and-Excitation_Networks_CVPR_2018_paper.html |
 | CBAM     | ECCV 2018   | CBAM: Convolutional Block Attention Module | https://openaccess.thecvf.com/content_ECCV_2018/html/Sanghyun_Woo_Convolutional_Block_Attention_ECCV_2018_paper.html |
-|    NonLocal      | CVPR 2018   |  Non-Local Neural Networks                                          |          https://openaccess.thecvf.com/content_cvpr_2018/html/Wang_Non-Local_Neural_Networks_CVPR_2018_paper.html                                                                                                            |
+| NonLocal | CVPR 2018   |  Non-Local Neural Networks                                          |          https://openaccess.thecvf.com/content_cvpr_2018/html/Wang_Non-Local_Neural_Networks_CVPR_2018_paper.html                                                                                                            |
+|          |             |                                            |                                                                                                                      |
+|          |             |                                            |                                                                                                                      |
+| DANet    | CVPR 2019   |         Dual Attention Network for Scene Segmentation                                   |     https://openaccess.thecvf.com/content_CVPR_2019/html/Fu_Dual_Attention_Network_for_Scene_Segmentation_CVPR_2019_paper.html                                                                                                                 |
 |          |             |                                            |                                                                                                                      |
 | ECA      | CVPR 2020   | ECA-Net: Efficient Channel Attention for Deep Convolutional Neural Networks | https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_ECA-Net_Efficient_Channel_Attention_for_Deep_Convolutional_Neural_Networks_CVPR_2020_paper.html |
 |          |             |                                                              |                                                              |
@@ -38,5 +41,5 @@
 | CA       | CVPR 2021   | Coordinate Attention for Efficient Mobile Network Design     | https://openaccess.thecvf.com/content/CVPR2021/html/Hou_Coordinate_Attention_for_Efficient_Mobile_Network_Design_CVPR_2021_paper.html |
 | SA-Net   | ICASSP 2021 | SA-Net: Shuffle Attention for Deep Convolutional Neural Networks | https://ieeexplore.ieee.org/abstract/document/9414568        |
 | FcaNet   | ICCV 2021   |       FcaNet: Frequency Channel Attention Networks                                                       |            https://openaccess.thecvf.com/content/ICCV2021/html/Qin_FcaNet_Frequency_Channel_Attention_Networks_ICCV_2021_paper.html                                                  |
-|  |             |                                                              |                                                              |
+|          |             |                                                              |                                                              |
 
