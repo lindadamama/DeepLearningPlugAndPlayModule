@@ -68,4 +68,14 @@
 |          |                                                          |                                                              |                                                              |
 |          |                                                          |                                                              |                                                              |
 |          |                                                          |                                                              |                                                              |
+|          |                                                          |                                                              |                                                              |
+|          |                                                          |                                                              |                                                              |
+|   MSPA   | Engineering Applications of Artificial Intelligence 2024 | Multi-scale spatial pyramid attention mechanism for image recognition: An effective approach | https://www.sciencedirect.com/science/article/abs/pii/S0952197624004196 |
+|          |                                                          |                                                              |                                                              |
+|          |                                                          |                                                              |                                                              |
+|          |                                                          |                                                              |                                                              |
+|          |                                                          |                                                              |                                                              |
+|          |                                                          |                                                              |                                                              |
+|          |                                                          |                                                              |                                                              |
+|          |                                                          |                                                              |                                                              |
 
