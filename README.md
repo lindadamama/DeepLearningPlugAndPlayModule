@@ -73,7 +73,7 @@
 |   MSPA   | Engineering Applications of Artificial Intelligence 2024 | Multi-scale spatial pyramid attention mechanism for image recognition: An effective approach | https://www.sciencedirect.com/science/article/abs/pii/S0952197624004196 |
 |          |                                                          |                                                              |                                                              |
 |          |                                                          |                                                              |                                                              |
-|          |                                                          |                                                              |                                                              |
+|   MAB    | CVPR 2024                                                | Multi-scale Attention Network for Single Image Super-Resolution | https://openaccess.thecvf.com/content/CVPR2024W/NTIRE/html/Wang_Multi-scale_Attention_Network_for_Single_Image_Super-Resolution_CVPRW_2024_paper.html |
 |          |                                                          |                                                              |                                                              |
 |          |                                                          |                                                              |                                                              |
 |          |                                                          |                                                              |                                                              |
