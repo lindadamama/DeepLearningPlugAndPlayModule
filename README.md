@@ -87,9 +87,10 @@
 
 替换普通卷积即可有效涨点！
 
-| 卷积模块 | 期刊/会议 |                           论文标题                           | 论文地址                                                     |
-| :------: | :-------- | :----------------------------------------------------------: | ------------------------------------------------------------ |
-|  DCNv4   | CVPR 2024 | Efficient Deformable ConvNets: Rethinking Dynamic and Sparse Operator for Vision Applications | https://openaccess.thecvf.com/content/CVPR2024/html/Xiong_Efficient_Deformable_ConvNets_Rethinking_Dynamic_and_Sparse_Operator_for_Vision_CVPR_2024_paper.html |
-|          |           |                                                              |                                                              |
-|          |           |                                                              |                                                              |
+|  卷积模块  | 期刊/会议     |                           论文标题                           | 论文地址                                                     |
+|:------:|:----------| :----------------------------------------------------------: | ------------------------------------------------------------ |
+| SCConv | CVPR 2023 |      SCConv: Spatial and Channel Reconstruction Convolution for Feature Redundancy                                                                                         |          https://openaccess.thecvf.com/content/CVPR2023/html/Li_SCConv_Spatial_and_Channel_Reconstruction_Convolution_for_Feature_Redundancy_CVPR_2023_paper.html                                                                                                                                                      |
+| DCNv4  | CVPR 2024 | Efficient Deformable ConvNets: Rethinking Dynamic and Sparse Operator for Vision Applications | https://openaccess.thecvf.com/content/CVPR2024/html/Xiong_Efficient_Deformable_ConvNets_Rethinking_Dynamic_and_Sparse_Operator_for_Vision_CVPR_2024_paper.html |
+|        |           |                                                              |                                                              |
+|        |           |                                                              |                                                              |
 
