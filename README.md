@@ -63,7 +63,7 @@
 |            |                                                          |                                                              |                                                              |
 |            |                                                          |                                                              |                                                              |
 |    MCA     | Engineering Applications of Artificial Intelligence 2023 | MCA: Multidimensional collaborative attention in deep convolutional neural networks for image recognition | https://www.sciencedirect.com/science/article/abs/pii/S0952197623012630 |
-|            |                                                          |                                                              |                                                              |
+|    GLSA    | PRCV 2023                                                | DuAT: Dual-Aggregation Transformer Network for Medical Image Segmentation | https://link.springer.com/chapter/10.1007/978-981-99-8469-5_27?utm_source=chatgpt.com |
 |            |                                                          |                                                              |                                                              |
 |            |                                                          |                                                              |                                                              |
 |            |                                                          |                                                              |                                                              |
@@ -91,6 +91,6 @@
 |:------:|:----------| :----------------------------------------------------------: | ------------------------------------------------------------ |
 | SCConv | CVPR 2023 |      SCConv: Spatial and Channel Reconstruction Convolution for Feature Redundancy                                                                                         |          https://openaccess.thecvf.com/content/CVPR2023/html/Li_SCConv_Spatial_and_Channel_Reconstruction_Convolution_for_Feature_Redundancy_CVPR_2023_paper.html                                                                                                                                                      |
 | DCNv4  | CVPR 2024 | Efficient Deformable ConvNets: Rethinking Dynamic and Sparse Operator for Vision Applications | https://openaccess.thecvf.com/content/CVPR2024/html/Xiong_Efficient_Deformable_ConvNets_Rethinking_Dynamic_and_Sparse_Operator_for_Vision_CVPR_2024_paper.html |
-|        |           |                                                              |                                                              |
+|    |  |                                                              |                                                              |
 |        |           |                                                              |                                                              |
 
