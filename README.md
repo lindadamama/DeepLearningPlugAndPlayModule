@@ -24,8 +24,8 @@
 
 ## 已复现
 
-|    模块    | 期刊/会议                                                |                           论文标题                           | 论文地址                                                     |
-| :--------: | :------------------------------------------------------- | :----------------------------------------------------------: | ------------------------------------------------------------ |
+|     模块     | 期刊/会议                                                    |                           论文标题                           | 论文地址                                                     |
+|:----------:|:---------------------------------------------------------| :----------------------------------------------------------: | ------------------------------------------------------------ |
 |            |                                                          |                                                              |                                                              |
 |            |                                                          |                                                              |                                                              |
 |   SENet    | CVPR 2018                                                |               Squeeze-and-Excitation Networks                | https://openaccess.thecvf.com/content_cvpr_2018/html/Hu_Squeeze-and-Excitation_Networks_CVPR_2018_paper.html |
@@ -53,6 +53,7 @@
 |     CA     | CVPR 2021                                                |   Coordinate Attention for Efficient Mobile Network Design   | https://openaccess.thecvf.com/content/CVPR2021/html/Hou_Coordinate_Attention_for_Efficient_Mobile_Network_Design_CVPR_2021_paper.html |
 |   SA-Net   | ICASSP 2021                                              | SA-Net: Shuffle Attention for Deep Convolutional Neural Networks | https://ieeexplore.ieee.org/abstract/document/9414568        |
 |   FcaNet   | ICCV 2021                                                |         FcaNet: Frequency Channel Attention Networks         | https://openaccess.thecvf.com/content/ICCV2021/html/Qin_FcaNet_Frequency_Channel_Attention_Networks_ICCV_2021_paper.html |
+|    SRA     | ICCV 2021                                                |        Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction Without Convolutions                                                      |          https://openaccess.thecvf.com/content/ICCV2021/html/Wang_Pyramid_Vision_Transformer_A_Versatile_Backbone_for_Dense_Prediction_Without_ICCV_2021_paper.html                                                                                                                |
 |   SimAM    | PMLR 2021                                                | SimAM: A Simple, Parameter-Free Attention Module for Convolutional Neural Networks | https://proceedings.mlr.press/v139/yang21o                   |
 |    AFF     | WACV 2021                                                |                  Attentional Feature Fusion                  | https://openaccess.thecvf.com/content/WACV2021/html/Dai_Attentional_Feature_Fusion_WACV_2021_paper.html |
 |            |                                                          |                                                              |                                                              |
