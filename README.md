@@ -2,7 +2,7 @@
 
 ## 介绍
 
-深度学习即插即用模块代码复现（代码 + 论文标题 + 论文地址）  基于PyTorch
+深度学习即插即用模块代码复现（代码 + 论文标题 + 论文地址）  基于PyTorch（参考论文给出的源代码）
 
 代码输入张量 N×C×H×W，输出张量 N×C×H×W
 
@@ -24,61 +24,61 @@
 
 ## 已复现
 
-|     模块     | 期刊/会议                                                    |                           论文标题                           | 论文地址                                                     |
-|:----------:|:---------------------------------------------------------| :----------------------------------------------------------: | ------------------------------------------------------------ |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|   SENet    | CVPR 2018                                                |               Squeeze-and-Excitation Networks                | https://openaccess.thecvf.com/content_cvpr_2018/html/Hu_Squeeze-and-Excitation_Networks_CVPR_2018_paper.html |
-|    CBAM    | ECCV 2018                                                |          CBAM: Convolutional Block Attention Module          | https://openaccess.thecvf.com/content_ECCV_2018/html/Sanghyun_Woo_Convolutional_Block_Attention_ECCV_2018_paper.html |
-|  NonLocal  | CVPR 2018                                                |                  Non-Local Neural Networks                   | https://openaccess.thecvf.com/content_cvpr_2018/html/Wang_Non-Local_Neural_Networks_CVPR_2018_paper.html |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|   DANet    | CVPR 2019                                                |        Dual Attention Network for Scene Segmentation         | https://openaccess.thecvf.com/content_CVPR_2019/html/Fu_Dual_Attention_Network_for_Scene_Segmentation_CVPR_2019_paper.html |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|    ECA     | CVPR 2020                                                | ECA-Net: Efficient Channel Attention for Deep Convolutional Neural Networks | https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_ECA-Net_Efficient_Channel_Attention_for_Deep_Convolutional_Neural_Networks_CVPR_2020_paper.html |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|     CA     | CVPR 2021                                                |   Coordinate Attention for Efficient Mobile Network Design   | https://openaccess.thecvf.com/content/CVPR2021/html/Hou_Coordinate_Attention_for_Efficient_Mobile_Network_Design_CVPR_2021_paper.html |
-|   SA-Net   | ICASSP 2021                                              | SA-Net: Shuffle Attention for Deep Convolutional Neural Networks | https://ieeexplore.ieee.org/abstract/document/9414568        |
-|   FcaNet   | ICCV 2021                                                |         FcaNet: Frequency Channel Attention Networks         | https://openaccess.thecvf.com/content/ICCV2021/html/Qin_FcaNet_Frequency_Channel_Attention_Networks_ICCV_2021_paper.html |
-|    SRA     | ICCV 2021                                                |        Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction Without Convolutions                                                      |          https://openaccess.thecvf.com/content/ICCV2021/html/Wang_Pyramid_Vision_Transformer_A_Versatile_Backbone_for_Dense_Prediction_Without_ICCV_2021_paper.html                                                                                                                |
-|   SimAM    | PMLR 2021                                                | SimAM: A Simple, Parameter-Free Attention Module for Convolutional Neural Networks | https://proceedings.mlr.press/v139/yang21o                   |
-|    AFF     | WACV 2021                                                |                  Attentional Feature Fusion                  | https://openaccess.thecvf.com/content/WACV2021/html/Dai_Attentional_Feature_Fusion_WACV_2021_paper.html |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|    MCA     | Engineering Applications of Artificial Intelligence 2023 | MCA: Multidimensional collaborative attention in deep convolutional neural networks for image recognition | https://www.sciencedirect.com/science/article/abs/pii/S0952197623012630 |
-|    GLSA    | PRCV 2023                                                | DuAT: Dual-Aggregation Transformer Network for Medical Image Segmentation | https://link.springer.com/chapter/10.1007/978-981-99-8469-5_27?utm_source=chatgpt.com |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|    MSPA    | Engineering Applications of Artificial Intelligence 2024 | Multi-scale spatial pyramid attention mechanism for image recognition: An effective approach | https://www.sciencedirect.com/science/article/abs/pii/S0952197624004196 |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|    MAB     | CVPR 2024                                                | Multi-scale Attention Network for Single Image Super-Resolution | https://openaccess.thecvf.com/content/CVPR2024W/NTIRE/html/Wang_Multi-scale_Attention_Network_for_Single_Image_Super-Resolution_CVPRW_2024_paper.html |
-| MetaFormer | TPAMI 2024                                               |               MetaFormer Baselines for Vision                | https://ieeexplore.ieee.org/document/10304335                |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
-|            |                                                          |                                                              |                                                              |
+|       模块       | 期刊/会议                                                    |                           论文标题                           | 论文地址                                                     |
+|:--------------:|:---------------------------------------------------------| :----------------------------------------------------------: | ------------------------------------------------------------ |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|     SENet      | CVPR 2018                                                |               Squeeze-and-Excitation Networks                | https://openaccess.thecvf.com/content_cvpr_2018/html/Hu_Squeeze-and-Excitation_Networks_CVPR_2018_paper.html |
+|      CBAM      | ECCV 2018                                                |          CBAM: Convolutional Block Attention Module          | https://openaccess.thecvf.com/content_ECCV_2018/html/Sanghyun_Woo_Convolutional_Block_Attention_ECCV_2018_paper.html |
+|    NonLocal    | CVPR 2018                                                |                  Non-Local Neural Networks                   | https://openaccess.thecvf.com/content_cvpr_2018/html/Wang_Non-Local_Neural_Networks_CVPR_2018_paper.html |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|     DANet      | CVPR 2019                                                |        Dual Attention Network for Scene Segmentation         | https://openaccess.thecvf.com/content_CVPR_2019/html/Fu_Dual_Attention_Network_for_Scene_Segmentation_CVPR_2019_paper.html |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|      ECA       | CVPR 2020                                                | ECA-Net: Efficient Channel Attention for Deep Convolutional Neural Networks | https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_ECA-Net_Efficient_Channel_Attention_for_Deep_Convolutional_Neural_Networks_CVPR_2020_paper.html |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|       CA       | CVPR 2021                                                |   Coordinate Attention for Efficient Mobile Network Design   | https://openaccess.thecvf.com/content/CVPR2021/html/Hou_Coordinate_Attention_for_Efficient_Mobile_Network_Design_CVPR_2021_paper.html |
+|     SA-Net     | ICASSP 2021                                              | SA-Net: Shuffle Attention for Deep Convolutional Neural Networks | https://ieeexplore.ieee.org/abstract/document/9414568        |
+|     FcaNet     | ICCV 2021                                                |         FcaNet: Frequency Channel Attention Networks         | https://openaccess.thecvf.com/content/ICCV2021/html/Qin_FcaNet_Frequency_Channel_Attention_Networks_ICCV_2021_paper.html |
+|      SRA       | ICCV 2021                                                |        Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction Without Convolutions                                                      |          https://openaccess.thecvf.com/content/ICCV2021/html/Wang_Pyramid_Vision_Transformer_A_Versatile_Backbone_for_Dense_Prediction_Without_ICCV_2021_paper.html                                                                                                                |
+|     SimAM      | PMLR 2021                                                | SimAM: A Simple, Parameter-Free Attention Module for Convolutional Neural Networks | https://proceedings.mlr.press/v139/yang21o                   |
+|      AFF       | WACV 2021                                                |                  Attentional Feature Fusion                  | https://openaccess.thecvf.com/content/WACV2021/html/Dai_Attentional_Feature_Fusion_WACV_2021_paper.html |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|      MCA       | Engineering Applications of Artificial Intelligence 2023 | MCA: Multidimensional collaborative attention in deep convolutional neural networks for image recognition | https://www.sciencedirect.com/science/article/abs/pii/S0952197623012630 |
+|      GLSA      | PRCV 2023                                                | DuAT: Dual-Aggregation Transformer Network for Medical Image Segmentation | https://link.springer.com/chapter/10.1007/978-981-99-8469-5_27?utm_source=chatgpt.com |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|      MSPA      | Engineering Applications of Artificial Intelligence 2024 | Multi-scale spatial pyramid attention mechanism for image recognition: An effective approach | https://www.sciencedirect.com/science/article/abs/pii/S0952197624004196 |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
+|      MAB       | CVPR 2024                                                | Multi-scale Attention Network for Single Image Super-Resolution | https://openaccess.thecvf.com/content/CVPR2024W/NTIRE/html/Wang_Multi-scale_Attention_Network_for_Single_Image_Super-Resolution_CVPRW_2024_paper.html |
+|   MetaFormer   | TPAMI 2024                                               |               MetaFormer Baselines for Vision                | https://ieeexplore.ieee.org/document/10304335                |
+| AgentAttention | ECCV 2024                                                |        Agent Attention: On the Integration of Softmax and Linear Attention                                                      |        https://link.springer.com/chapter/10.1007/978-3-031-72973-7_8                                                      |
+|                |                                                          |                                                              |                                                              |
+|                |                                                          |                                                              |                                                              |
 
 
 
