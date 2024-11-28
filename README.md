@@ -77,7 +77,7 @@
 |      MAB       | CVPR 2024                                                | Multi-scale Attention Network for Single Image Super-Resolution | https://openaccess.thecvf.com/content/CVPR2024W/NTIRE/html/Wang_Multi-scale_Attention_Network_for_Single_Image_Super-Resolution_CVPRW_2024_paper.html |
 |   MetaFormer   | TPAMI 2024                                               |               MetaFormer Baselines for Vision                | https://ieeexplore.ieee.org/document/10304335                |
 | AgentAttention | ECCV 2024                                                |        Agent Attention: On the Integration of Softmax and Linear Attention                                                      |        https://link.springer.com/chapter/10.1007/978-3-031-72973-7_8                                                      |
-|                |                                                          |                                                              |                                                              |
+|      CSAM      | WACV 2024                                                |      CSAM: A 2.5D Cross-Slice Attention Module for Anisotropic Volumetric Medical Image Segmentation                                                        |         https://openaccess.thecvf.com/content/WACV2024/html/Hung_CSAM_A_2.5D_Cross-Slice_Attention_Module_for_Anisotropic_Volumetric_Medical_WACV_2024_paper.html                                                     |
 |                |                                                          |                                                              |                                                              |
 
 
