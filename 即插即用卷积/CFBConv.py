@@ -19,7 +19,7 @@ class MLP(BaseModule):
         super(MLP,self).__init__()
         hidden_channels = hidden_channels or in_channels
         out_channels = out_channels or in_channels
-        self.norm = nn.SyncBatchNorm(in_channels, eps=1e-06)  #TODO,1e-6?
+        self.norm = nn.SyncBatchNorm(in_channels, eps=1e-06)
         self.conv1 = nn.Conv2d(in_channels, hidden_channels, 3, 1, 1)
         self.act = nn.GELU()
         self.conv2 = nn.Conv2d(hidden_channels, out_channels, 3, 1, 1)
