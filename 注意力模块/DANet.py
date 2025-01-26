@@ -1,109 +1,96 @@
-import torch
+import numpy as np
 import torch.nn as nn
-import torch.nn.functional as F
+import torch
+from torch.nn import Module, Sequential, Conv2d, ReLU,AdaptiveMaxPool2d, AdaptiveAvgPool2d, \
+    NLLLoss, BCELoss, CrossEntropyLoss, AvgPool2d, MaxPool2d, Parameter, Linear, Sigmoid, Softmax, Dropout, Embedding
+torch_ver = torch.__version__[:3]
+
+__all__ = ['PAM_Module', 'CAM_Module']
 
 
-class PositionAttentionModule(nn.Module):
+class PAM_Module(Module):
     """ Position attention module"""
+    #Ref from SAGAN
+    def __init__(self, in_dim):
+        super(PAM_Module, self).__init__()
+        self.chanel_in = in_dim
 
-    def __init__(self, in_channels):
-        super(PositionAttentionModule, self).__init__()
-        self.in_channels = in_channels
-        self.inter_channels = in_channels // 8
+        self.query_conv = Conv2d(in_channels=in_dim, out_channels=in_dim//8, kernel_size=1)
+        self.key_conv = Conv2d(in_channels=in_dim, out_channels=in_dim//8, kernel_size=1)
+        self.value_conv = Conv2d(in_channels=in_dim, out_channels=in_dim, kernel_size=1)
+        self.gamma = Parameter(torch.zeros(1))
 
-        # Theta, Phi, G transformations
-        self.theta = nn.Conv2d(in_channels, self.inter_channels, kernel_size=1)
-        self.phi = nn.Conv2d(in_channels, self.inter_channels, kernel_size=1)
-        self.g = nn.Conv2d(in_channels, self.inter_channels, kernel_size=1)
-
-        # Output transformation
-        self.W = nn.Sequential(
-            nn.Conv2d(self.inter_channels, in_channels, kernel_size=1),
-            nn.BatchNorm2d(in_channels)
-        )
-
+        self.softmax = Softmax(dim=-1)
     def forward(self, x):
-        batch_size, C, H, W = x.size()
+        """
+            inputs :
+                x : input feature maps( B X C X H X W)
+            returns :
+                out : attention value + input feature
+                attention: B X (HxW) X (HxW)
+        """
+        m_batchsize, C, height, width = x.size()
+        proj_query = self.query_conv(x).view(m_batchsize, -1, width*height).permute(0, 2, 1)
+        proj_key = self.key_conv(x).view(m_batchsize, -1, width*height)
+        energy = torch.bmm(proj_query, proj_key)
+        attention = self.softmax(energy)
+        proj_value = self.value_conv(x).view(m_batchsize, -1, width*height)
 
-        # Theta and Phi feature transformations
-        theta = self.theta(x).view(batch_size, self.inter_channels, -1)  # (N, C', H*W)
-        phi = self.phi(x).view(batch_size, self.inter_channels, -1)  # (N, C', H*W)
-        phi = phi.permute(0, 2, 1)  # Transpose to (N, H*W, C')
+        out = torch.bmm(proj_value, attention.permute(0, 2, 1))
+        out = out.view(m_batchsize, C, height, width)
 
-        # Compute attention map
-        attention = torch.matmul(theta, phi)  # (N, H*W, H*W)
-        attention = F.softmax(attention, dim=-1)
-
-        # Apply attention map to g(x)
-        g = self.g(x).view(batch_size, self.inter_channels, -1)  # (N, C', H*W)
-        g = g.permute(0, 2, 1)  # (N, H*W, C')
-        out = torch.matmul(attention, g)  # (N, H*W, C')
-        out = out.permute(0, 2, 1).contiguous()  # (N, C', H*W)
-        out = out.view(batch_size, self.inter_channels, H, W)  # (N, C', H, W)
-
-        # Final output transformation and residual connection
-        out = self.W(out)
-        out = out + x
-
+        out = self.gamma*out + x
         return out
 
 
-class ChannelAttentionModule(nn.Module):
+class CAM_Module(Module):
     """ Channel attention module"""
+    def __init__(self, in_dim):
+        super(CAM_Module, self).__init__()
+        self.chanel_in = in_dim
 
-    def __init__(self, in_channels):
-        super(ChannelAttentionModule, self).__init__()
-        self.in_channels = in_channels
-        self.inter_channels = in_channels // 8
 
-        # Feature transformations for channel attention
-        self.theta = nn.Conv2d(in_channels, self.inter_channels, kernel_size=1)
-        self.phi = nn.Conv2d(in_channels, self.inter_channels, kernel_size=1)
+        self.gamma = Parameter(torch.zeros(1))
+        self.softmax  = Softmax(dim=-1)
+    def forward(self,x):
+        """
+            inputs :
+                x : input feature maps( B X C X H X W)
+            returns :
+                out : attention value + input feature
+                attention: B X C X C
+        """
+        m_batchsize, C, height, width = x.size()
+        proj_query = x.view(m_batchsize, C, -1)
+        proj_key = x.view(m_batchsize, C, -1).permute(0, 2, 1)
+        energy = torch.bmm(proj_query, proj_key)
+        energy_new = torch.max(energy, -1, keepdim=True)[0].expand_as(energy)-energy
+        attention = self.softmax(energy_new)
+        proj_value = x.view(m_batchsize, C, -1)
 
-        # Output transformation
-        self.W = nn.Sequential(
-            nn.Conv2d(in_channels, in_channels, kernel_size=1),
-            nn.BatchNorm2d(in_channels)
-        )
+        out = torch.bmm(attention, proj_value)
+        out = out.view(m_batchsize, C, height, width)
 
-    def forward(self, x):
-        batch_size, C, H, W = x.size()
-
-        # Apply transformations and compute attention
-        theta = self.theta(x).view(batch_size, self.inter_channels, -1)  # (N, C', H*W)
-        phi = self.phi(x).view(batch_size, self.inter_channels, -1)  # (N, C', H*W)
-        theta = theta.permute(0, 2, 1)  # (N, H*W, C')
-
-        # Compute attention map
-        attention = torch.matmul(theta, phi)  # (N, H*W, H*W)
-        attention = F.softmax(attention, dim=-1)
-
-        # Apply attention map
-        out = torch.matmul(phi, attention).view(batch_size, C, H, W)  # (N, C, H, W)
-
-        # Output transformation and residual connection
-        out = self.W(out)
-        out = out + x
-
+        out = self.gamma*out + x
         return out
 
 
-class DANet(nn.Module):
+class DANet(Module):
     """ DANet module """
 
     def __init__(self, in_channels, out_channels):
         super(DANet, self).__init__()
 
         # Shared convolutional layers
-        self.conv = nn.Sequential(
-            nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=1),
+        self.conv = Sequential(
+            Conv2d(in_channels, in_channels, kernel_size=3, padding=1),
             nn.BatchNorm2d(in_channels),
-            nn.ReLU(inplace=True)
+            ReLU(inplace=True)
         )
 
         # Position and Channel attention modules
-        self.position_attention = PositionAttentionModule(in_channels)
-        self.channel_attention = ChannelAttentionModule(in_channels)
+        self.position_attention = PAM_Module(in_channels)
+        self.channel_attention = CAM_Module(in_channels)
 
         # Output convolution
         self.output_conv = nn.Conv2d(in_channels, out_channels, kernel_size=1)
